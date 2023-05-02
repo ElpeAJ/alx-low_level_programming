@@ -1,25 +1,39 @@
 #include "main.h"
 
 /**
- * rev_strubg - Reverses a string
- * @s: The string to be modified
- * Return: void
+ * _strlen - returns the length of a string.
+ * @s: pointer to String
+ * Return: Nothing
  */
-
-void rev_string(char *s)
-        
+int _strlen(char *s)
 {
-        
-        int len =0, index =0;
-        char tmp;
-        
-        while (s[index++])
-        len++;  
-        
-        for (index = len - 1; index >= len / 2; index--)
-        {       
-                tmp = s[index];
-                s[index] = s[len - index - 1];
-                s[len - index - 1] = tmp;
-        }
+	int i = 0;
+
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ * rev_string - reverse the string
+ * @s: pointer to char
+ * Return: Nothing
+ */
+void rev_string(char *s)
+{
+	int len = 0, swap = 0, i = 0, fn = 0;
+
+	len = _strlen(s);
+	if (len > 0)
+	{
+		for (i = 0; i < ((len) / 2); i++)
+		{
+			swap = *(s + i);
+			fn = (len - 1) - i;
+			*(s + i) = *(s + fn);
+			*(s + fn) = swap;
+		}
+	}
 }
