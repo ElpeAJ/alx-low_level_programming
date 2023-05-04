@@ -4,7 +4,7 @@
   * _strncat - Concatenates two strings
   * using at most n bytes from src
   * @dest: input value
-  * @src: Input value
+  * @src: input value
   * @n: input vaulue
   * Return: dest
   */
@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 	j = 0;
-	while (j < n && src [j] != '\0')
+	while (j < n && src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
