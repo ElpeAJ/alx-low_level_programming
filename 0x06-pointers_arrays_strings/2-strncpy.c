@@ -2,29 +2,29 @@
 
 /**
   * _strncat - Concatenates two strings
-  * @dest: The destination value
-  * @src: The source value
-  * @n: The limit of the concatenation
-  *
-  * Return: A pointer to the resulting string dest
+  * using at most n bytes from src
+  * @dest: input value
+  * @src: Input value
+  * @n: input vaulue
+  * Return: dest
   */
 char *_strncat(char *dest, char *src, int n)
 {
-	int dlen = 0, j = 0;
+	int i;
+	int j;
 
-	while (dest[dlen])
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dlen++;
+		i++;
 	}
-
-	while (j < n && src[j])
+	j = 0;
+	while (j < n && src [j] != '\0')
 	{
-		dest[dlen] = src[j];
-		dlen++;
+		dest[i] = src[j];
+		i++;
 		j++;
 	}
-
-	dest[dlen + n + 1] = '\0';
-
+	dest[i] = '\0';
 	return (dest);
 }
