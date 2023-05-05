@@ -1,29 +1,38 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * rot13 - encoder rot13
- * @s: pointer to string params
- * Return: *s
- */
+* rot13 - encodes a string using rot13 encryption
+* @s: a pointer given by main
+*
+* Description: change all alpha characters by rot13 rules
+* Return: returns the s pointer
+*/
 
 char *rot13(char *s)
 {
-	int i;
+	int i = 0;
 	int j;
-	char data1[] =
-		"ABCDEFGHIJKLMNOPQRTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] =
-		"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"
-			for (i = 0; s[i] != '\0'; i++)
+	int begin[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A',
+'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	int end[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'N', 'O',
+'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E',
+'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
+
+	while (s[i] != 0)
+	{
+		for (j = 0; j < 52; j++)
 		{
-			for (j = 0; j < 52; j++)
+			if (s[i] == begin[j])
 			{
-				if (s[i] == data1[j])
-				{
-					s[i] = datarot[j];
-					break;
-				}
+				s[i] = end[j];
+				break;
 			}
+
 		}
-		return (s);
+		i++;
+	}
+	return (s);
 }
