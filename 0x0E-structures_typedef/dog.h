@@ -5,6 +5,7 @@
  * struct dog - Dog's basic information
  * @name: Name of the Dog
  * @age: Age of the Dog
+ * Description: long description
  * @owner: Dog's owner
  */
 struct dog
@@ -15,7 +16,7 @@ struct dog
 };
 
 /**
- * dog_t - typedef for struct dog
+ *dog_t - typedef for struct dog
  */
 
 typedef struct dog dog_t;
@@ -27,4 +28,4 @@ void free_dog(dog_t *d);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
-#endif
+#endif /*struct dog - structure of dog*/
