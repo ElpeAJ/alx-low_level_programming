@@ -11,6 +11,7 @@ int main(void)
 {
     float a;
     float r;
+    double PI = 3.14159265359;
 
     r = 98;
     a = PI * r * r;
