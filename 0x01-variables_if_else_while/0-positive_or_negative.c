@@ -3,6 +3,12 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
+
+/**
+ * main - prints both positive and negative integers
+ * Return: Always
+ */
+
 int main(void)
 {
 	int n;
@@ -18,7 +24,7 @@ int main(void)
 	{
 		printf("%i if the number is zero: is zero\n", n);
 	}
-	else if (n < 0)
+	else
 	{
 		printf("%i if the number is less than 0: is negative\n", n);
 	}
