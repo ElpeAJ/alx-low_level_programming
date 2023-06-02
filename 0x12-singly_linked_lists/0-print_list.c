@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * _print_list: Main function that prints all ele of linked list
+ * print_list -  Main function that prints all ele of linked list
  * @h: pointer
  * Return: s
  */
