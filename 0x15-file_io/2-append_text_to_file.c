@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * appent_text_to_file - Function
+ * append_text_to_file - Main Function
  * @filename: A pointer
  * @text_content: The string that is added to the end of the file
  * Return: 1 on success and -1 on failure
