@@ -2,7 +2,6 @@
 
 /**
  * sum_dlistint - Function that returns the sum of n
- * @dlistint_t: list which it's data is to be summed
  * @head: Pointer to the list
  *
  * Return: sum of n, otherwise 0 for empty list
