@@ -1,10 +1,10 @@
 #include "hash_tables.h"
 
 /**
- * key_index - Function to determine the index 
+ * key_index - Function to determine the index
  * for the given key based on its hash value.
  *
- * @key: Is the key 
+ * @key: Is the key
  * @size: Is the size of the array of the hash table
  *
  * Return: The index at which key/value pair
