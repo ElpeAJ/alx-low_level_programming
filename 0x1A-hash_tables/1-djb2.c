@@ -1,3 +1,12 @@
+#include "hash_tables.h"
+
+/**
+ * hash_djb2 - Function to determine the hash value
+ * @str: The key to hash.
+ *
+ * Return: The hash value.
+ *
+ **/
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
